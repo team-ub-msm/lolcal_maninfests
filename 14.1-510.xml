@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="Galaxy-MSM8916"
+           fetch="https://github.com"
+           review="review.msm8916.com"
+           revision="cm-14.1" />
+
+  <remove-project name="LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9"/>
+
+  <remove-project name="device/generic/mini-emulator-arm64" />
+  <remove-project name="device/generic/mini-emulator-x86" />
+  <remove-project name="device/generic/mini-emulator-x86_64" />
+  <remove-project name="device/generic/qemu" />
+  <remove-project name="device/generic/x86" />
+  <remove-project name="device/generic/x86_64" />
+
+  <remove-project name="platform/prebuilts/android-emulator" />
+
+  <remove-project name="platform/prebuilts/clang/darwin-x86/host/3.6"/>
+  <remove-project name="platform/prebuilts/clang/host/darwin-x86"/>
+
+  <remove-project name="platform/prebuilts/eclipse" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+  <remove-project name="platform/prebuilts/gdb/darwin-x86"/>
+  <remove-project name="platform/prebuilts/go/darwin-x86"/>
+  <remove-project name="platform/prebuilts/python/darwin-x86/2.7.5" />
+  
+  <remove-project name="platform/prebuilts/gradle-plugin" />
+  <remove-project name="platform/prebuilts/libs/libedit" />
+  <remove-project name="platform/prebuilts/maven_repo/android" />
+
+  <remove-project name="platform/sdk" />
+
+ <!-- TWRP -->
+  <project path="bootable/recovery-twrp" name="omnirom/android_bootable_recovery" remote="github" revision="android-7.1"/>
+
+  
+  <!-- Qcom Common -->
+  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common"/>
+
+ <!-- Galaxy Tab A -->
+  <project path="device/samsung/gt510wifi" name="team-ub-msm/android_device_samsung_gt510wifi" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/gte-common" name="Galaxy-MSM8916/android_device_samsung_gte-common" groups="device" remote="Galaxy-MSM8916"/>
+ <!-- Samsung MSM8916 Common Repos -->
+  <project path="device/samsung/msm8916-common" name="Galaxy-MSM8916/android_device_samsung_msm8916-common" groups="device" remote="Galaxy-MSM8916"/>
+  <project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" groups="device" />
+
+ <!-- Dependencies -->
+  <project path="external/busybox" name="LineageOS/android_external_busybox" />
+  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" />
+  <project path="external/stlport" name="LineageOS/android_external_stlport"/>
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings"/>
+  
+  
+ <!-- Samsung Hardware Repo -->
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung"/>
+
+  
+ <!-- Common Samsung MSM8916 Kernel -->
+  <project path="kernel/samsung/msm8916" name="team-ub-msm/android_kernel_samsung_msm8916" remote="Galaxy-MSM8916"/>
+ <!-- Vendor Trees For All Device Trees -->
+  <project path="vendor/samsung" name="team-ub-msm/proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
+</manifest>
